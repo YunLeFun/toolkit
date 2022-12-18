@@ -1,0 +1,65 @@
+{
+  "name": "@yunlefun/vueuse",
+  "type": "module",
+  "version": "0.0.1",
+  "packageManager": "pnpm@7.18.2",
+  "description": "Vue Composition API for YunLeFun developing.",
+  "author": {
+    "name": "YunLeFun",
+    "email": "i@yunle.fun",
+    "url": "https://www.yunle.fun"
+  },
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/YunLeFun",
+  "homepage": "https://github.com/YunLeFun/toolkit/blob/main/packages/vueuse#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YunLeFun/toolkit.git"
+  },
+  "bugs": "https://github.com/YunLeFun/toolkit/issues",
+  "keywords": [
+    "toolkit",
+    "vueuse"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "lint": "eslint .",
+    "prepublishOnly": "npm run build",
+    "release": "bumpp && npm publish",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "@vueuse/core": "*",
+    "vue": "*"
+  },
+  "dependencies": {
+    "@yunlefun/utils": "workspace:*"
+  },
+  "devDependencies": {
+    "@vueuse/core": "^9.7.0",
+    "vue": "^3.2.45"
+  }
+}
