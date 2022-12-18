@@ -1,12 +1,19 @@
 import { isClient } from '../common'
-import type { RegisterWxShareInfoOptions } from './types'
+import { registerWxShare } from './jsApi'
+import type { WxConfig } from './types'
+
+export interface WxInitOptions {
+  config: WxConfig
+  onReady?: () => void
+  onError?: (res: any) => void
+}
 
 /**
- * Register Wx Share
+ * Create wx helpers
  * @param options
  * @returns
  */
-export const registerWxShare = (options: RegisterWxShareInfoOptions) => {
+export const createWx = (options: WxInitOptions) => {
   if (!isClient)
     return
 
@@ -15,27 +22,14 @@ export const registerWxShare = (options: RegisterWxShareInfoOptions) => {
 
   const wx = window.wx
   wx.config(options.config)
-
-  const shareData = options.shareData
   wx.ready(() => {
-    // 需在用户可能点击分享按钮前就先调用
-    wx.updateAppMessageShareData({
-      title: shareData.title,
-      desc: shareData.desc,
-      link: shareData.link,
-      imgUrl: shareData.imgUrl,
-      success: () => {
-        shareData.onUpdateAppMessageShareDataSuccess?.()
-      },
-    })
-    wx.updateTimelineShareData({
-      title: shareData.title,
-      desc: shareData.desc,
-      link: shareData.link,
-      imgUrl: shareData.imgUrl,
-      success: () => {
-        shareData.onUpdateTimelineShareDataSuccess?.()
-      },
-    })
+    options.onReady?.()
   })
+  wx.error((res: any) => {
+    options.onError?.(res)
+  })
+
+  return {
+    registerWxShare,
+  }
 }

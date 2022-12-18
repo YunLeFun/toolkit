@@ -1,15 +1,16 @@
 <script lang="ts" setup>
-import type { WxShareOptions } from '@yunlefun/vueuse'
-import { useWxShare } from '@yunlefun/vueuse'
+import type { WxJsApiOptions } from '@yunlefun/vueuse'
+import { useWxJsApi } from '@yunlefun/vueuse'
+import { registerWxShare } from '@yunlefun/utils'
 
 const wxDomain = 'https://wx.yunyoujun.cn'
 const url = window?.location?.href?.split?.('#')?.[0]
 
-useWxShare(async () => {
+const { isReady } = useWxJsApi(async () => {
   const data = await fetch(`${wxDomain}/wx/config?url=${url}`)
     .then(res => res.json())
 
-  const wxShareOptions: WxShareOptions = {
+  const wxJsApiOptions: WxJsApiOptions = {
     config: {
       // debug: true,
       appId: 'wx80bfa39c2ebe26e8', // replace with your appId
@@ -21,19 +22,25 @@ useWxShare(async () => {
         'updateTimelineShareData',
       ],
     },
-    shareData: {
-      title: '@YunLeFun/vueuse',
-      desc: 'Vue Composition API for Wx Share.',
-      link: 'https://github.com/YunLeFun/toolkit/blob/main/packages/vueuse/?source=wx',
-      imgUrl: 'https://cn.vuejs.org/logo.svg',
+    onReady: () => {
+      registerWxShare({
+        title: '@YunLeFun/vueuse',
+        desc: 'Vue Composition API for Wx Share.',
+        link: 'https://github.com/YunLeFun/toolkit/blob/main/packages/vueuse/?source=wx',
+        imgUrl: 'https://cn.vuejs.org/logo.svg',
+      })
     },
   }
-  return wxShareOptions
+
+  return wxJsApiOptions
 })
 </script>
 
 <template>
   <div>
     Wx Share Demo
+    <div>
+      Ready: {{ isReady }}
+    </div>
   </div>
 </template>
