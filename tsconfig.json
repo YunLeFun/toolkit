@@ -17,7 +17,7 @@
     "types": [
       "vitest",
       "vite/client",
-      "node",
+      "node"
     ],
     "paths": {
       "@yunlefun/*": [

@@ -53,7 +53,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@yunlefun/vueuse": "workspace:*",
-    "@yunlefun/utils": "workspace:*"
+    "@yunlefun/utils": "workspace:*",
+    "@yunlefun/vueuse": "workspace:*"
   }
 }

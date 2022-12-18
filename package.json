@@ -16,17 +16,20 @@
     "url": "git+https://github.com/YunLeFun/toolkit.git"
   },
   "scripts": {
-    "build": "pnpm -r --filter=./packages/** run build"
+    "build": "pnpm -r --filter=./packages/** run build",
+    "lint": "eslint .",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.27.0",
+    "@antfu/eslint-config": "^0.34.0",
     "@types/node": "^18.7.18",
     "@yunlefun/vueuse": "workspace:*",
     "bumpp": "^8.2.1",
     "eslint": "^8.23.1",
     "typescript": "^4.8.3",
-    "unbuild": "^0.8.11",
-    "vite": "^3.1.2",
-    "vitest": "^0.23.4"
+    "unbuild": "^1.0.2",
+    "vite": "^4.0.2",
+    "vitest": "^0.25.8"
   }
 }
