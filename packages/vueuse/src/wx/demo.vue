@@ -21,10 +21,12 @@ useWxShare(async () => {
         'updateTimelineShareData',
       ],
     },
-    title: '@YunLeFun/vueuse',
-    desc: 'Vue Composition API for Wx Share.',
-    link: 'https://github.com/YunLeFun/toolkit/blob/main/packages/vueuse/?source=wx',
-    imgUrl: 'https://cn.vuejs.org/logo.svg',
+    shareData: {
+      title: '@YunLeFun/vueuse',
+      desc: 'Vue Composition API for Wx Share.',
+      link: 'https://github.com/YunLeFun/toolkit/blob/main/packages/vueuse/?source=wx',
+      imgUrl: 'https://cn.vuejs.org/logo.svg',
+    },
   }
   return wxShareOptions
 })

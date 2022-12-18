@@ -19,7 +19,7 @@ export interface WxShareInfo {
   imgUrl: string
 }
 
-export interface RegisterWxShareInfoOptions extends WxShareInfo {
+export interface RegisterWxShareInfoOptions {
   /**
    * 通过 config 接口注入权限验证配置
    */
@@ -50,14 +50,16 @@ export interface RegisterWxShareInfoOptions extends WxShareInfo {
     jsApiList: (typeof jsApiList)[number][]
   }
 
-  /**
-   * 自定义“分享给朋友”及“分享到QQ”按钮的分享内容 成功
-   * @returns
-   */
-  onUpdateAppMessageShareDataSuccess?: () => void
-  /**
-   * 自定义“分享到朋友圈”及“分享到 QQ 空间”按钮的分享内容 成功
-   * @returns
-   */
-  onUpdateTimelineShareDataSuccess?: () => void
+  shareData: WxShareInfo & {
+    /**
+     * 自定义“分享给朋友”及“分享到QQ”按钮的分享内容 成功
+     * @returns
+     */
+    onUpdateAppMessageShareDataSuccess?: () => void
+    /**
+     * 自定义“分享到朋友圈”及“分享到 QQ 空间”按钮的分享内容 成功
+     * @returns
+     */
+    onUpdateTimelineShareDataSuccess?: () => void
+  }
 }

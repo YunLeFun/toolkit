@@ -14,26 +14,27 @@ export const registerWxShare = (options: RegisterWxShareInfoOptions) => {
     return
 
   const wx = window.wx
-
   wx.config(options.config)
+
+  const shareData = options.shareData
   wx.ready(() => {
     // 需在用户可能点击分享按钮前就先调用
     wx.updateAppMessageShareData({
-      title: options.title,
-      desc: options.desc,
-      link: options.link,
-      imgUrl: options.imgUrl,
+      title: shareData.title,
+      desc: shareData.desc,
+      link: shareData.link,
+      imgUrl: shareData.imgUrl,
       success: () => {
-        options.onUpdateAppMessageShareDataSuccess?.()
+        shareData.onUpdateAppMessageShareDataSuccess?.()
       },
     })
     wx.updateTimelineShareData({
-      title: options.title,
-      desc: options.desc,
-      link: options.link,
-      imgUrl: options.imgUrl,
+      title: shareData.title,
+      desc: shareData.desc,
+      link: shareData.link,
+      imgUrl: shareData.imgUrl,
       success: () => {
-        options.onUpdateTimelineShareDataSuccess?.()
+        shareData.onUpdateTimelineShareDataSuccess?.()
       },
     })
   })
