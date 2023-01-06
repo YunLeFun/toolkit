@@ -23,13 +23,13 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.34.0",
-    "@types/node": "^18.7.18",
+    "@types/node": "^18.11.18",
     "@yunlefun/vueuse": "workspace:*",
     "bumpp": "^8.2.1",
-    "eslint": "^8.23.1",
+    "eslint": "^8.31.0",
     "typescript": "^4.8.3",
     "unbuild": "^1.0.2",
-    "vite": "^4.0.2",
-    "vitest": "^0.25.8"
+    "vite": "^4.0.4",
+    "vitest": "^0.26.3"
   }
 }
