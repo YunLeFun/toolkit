@@ -2,7 +2,7 @@
   "name": "@yunlefun/toolkit-monorepo",
   "type": "module",
   "version": "0.0.0",
-  "packageManager": "pnpm@7.18.2",
+  "packageManager": "pnpm@8.1.0",
   "description": "Toolkit for YunLeFun developing.",
   "author": {
     "name": "YunLeFun",
