@@ -59,7 +59,7 @@
     "@yunlefun/utils": "workspace:*"
   },
   "devDependencies": {
-    "@vueuse/core": "^9.10.0",
-    "vue": "^3.2.45"
+    "@vueuse/core": "^9.13.0",
+    "vue": "^3.2.47"
   }
 }

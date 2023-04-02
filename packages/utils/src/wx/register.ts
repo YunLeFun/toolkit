@@ -13,7 +13,7 @@ export interface WxInitOptions {
  * @param options
  * @returns
  */
-export const createWx = (options: WxInitOptions) => {
+export function createWx(options: WxInitOptions) {
   if (!isClient)
     return
 

@@ -35,7 +35,7 @@ export interface RegisterWxShareOptions extends WxShareInfo {
  * @param options
  * @returns
  */
-export const registerWxShare = (shareOptions: RegisterWxShareOptions) => {
+export function registerWxShare(shareOptions: RegisterWxShareOptions) {
   const wx = window.wx
 
   // 需在用户可能点击分享按钮前就先调用

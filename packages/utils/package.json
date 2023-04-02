@@ -50,5 +50,8 @@
     "release": "bumpp && npm publish",
     "test": "vitest",
     "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "html2canvas": "*"
   }
 }
