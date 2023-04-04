@@ -1,3 +1,2 @@
-import { isClient } from '@yunlefun/utils'
-
-console.log(isClient)
+// import { isClient } from '@yunlefun/utils'
+// console.log(isClient)

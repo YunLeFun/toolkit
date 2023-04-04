@@ -1,3 +1,8 @@
+/**
+ * @description can not run async function concurrently
+ * @param fn
+ * @returns
+ */
 export function createAsyncLock<T>(fn: () => Promise<T>) {
   const state = {
     isLocked: false,
