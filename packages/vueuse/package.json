@@ -2,7 +2,6 @@
   "name": "@yunlefun/vueuse",
   "type": "module",
   "version": "0.0.4",
-  "packageManager": "pnpm@7.18.2",
   "description": "Vue Composition API for YunLeFun developing.",
   "author": {
     "name": "YunLeFun",

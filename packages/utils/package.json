@@ -1,8 +1,7 @@
 {
   "name": "@yunlefun/utils",
   "type": "module",
-  "version": "0.0.5",
-  "packageManager": "pnpm@7.18.2",
+  "version": "0.0.6",
   "description": "Common Utils for YunLeFun developing.",
   "author": {
     "name": "YunLeFun",
