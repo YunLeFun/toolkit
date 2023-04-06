@@ -9,7 +9,4 @@ export default defineBuildConfig({
   rollup: {
     emitCJS: true,
   },
-  externals: [
-    'html2canvas',
-  ],
 })

@@ -1,7 +1,7 @@
 {
   "name": "@yunlefun/utils",
   "type": "module",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Common Utils for YunLeFun developing.",
   "author": {
     "name": "YunLeFun",
@@ -49,8 +49,5 @@
     "release": "bumpp && npm publish",
     "test": "vitest",
     "typecheck": "tsc --noEmit"
-  },
-  "peerDependencies": {
-    "html2canvas": "*"
   }
 }

@@ -1,5 +1,3 @@
-export * from './html2canvas'
-
 export function getImagesOptions(images: Record<string, string>) {
   return Object.entries(images).map(([_key, image]) => ({ src: image }))
 }

@@ -23,7 +23,6 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.38.4",
-    "@types/html2canvas": "^1.0.0",
     "@types/node": "^18.15.11",
     "@yunlefun/vueuse": "workspace:*",
     "@yunyoujun/utils": "^0.3.5",
