@@ -3,9 +3,9 @@ import { registerWxShare } from './jsApi'
 import type { WxConfig } from './types'
 
 export interface WxInitOptions {
-  config?: Partial<WxConfig>;
-  onReady?: () => void;
-  onError?: (res: any) => void;
+  config?: Partial<WxConfig>
+  onReady?: () => void
+  onError?: (res: any) => void
 }
 
 /**

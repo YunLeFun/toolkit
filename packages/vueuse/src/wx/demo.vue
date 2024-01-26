@@ -17,7 +17,7 @@ if (isInWxBrowser()) {
         link: 'https://github.com/YunLeFun/toolkit/blob/main/packages/vueuse/?source=wx',
         imgUrl: 'https://cn.vuejs.org/logo.svg',
       })
-    }
+    },
   })
   isReady.value = isWxReady.value
 }
