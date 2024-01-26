@@ -17,6 +17,7 @@
   },
   "scripts": {
     "build": "pnpm -r --filter=./packages/** run build",
+    "ci:publish": "pnpm -r publish --access public --no-git-checks",
     "lint": "eslint .",
     "release": "bumpp",
     "test": "vitest",
