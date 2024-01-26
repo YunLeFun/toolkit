@@ -1,7 +1,7 @@
 {
   "name": "@yunlefun/utils",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Common Utils for YunLeFun developing.",
   "author": {
     "name": "YunLeFun",
