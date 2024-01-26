@@ -1,7 +1,7 @@
 {
   "name": "@yunlefun/toolkit-monorepo",
   "type": "module",
-  "version": "0.1.2-beta.2",
+  "version": "0.1.2-beta.3",
   "private": true,
   "packageManager": "pnpm@8.14.3",
   "description": "Toolkit for YunLeFun developing.",
@@ -14,7 +14,7 @@
   "funding": "https://github.com/sponsors/YunLeFun",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YunLeFun/toolkit.git"
+    "url": "https://github.com/YunLeFun/toolkit.git"
   },
   "scripts": {
     "build": "pnpm -r --filter=./packages/** run build",
