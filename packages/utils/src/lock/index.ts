@@ -1,7 +1,6 @@
 /**
  * @description can not run async function concurrently
  * @param fn
- * @returns
  */
 export function createAsyncLock<T>(fn: () => Promise<T>) {
   const state = {
@@ -17,9 +16,8 @@ export function createAsyncLock<T>(fn: () => Promise<T>) {
 
     state.isLocked = true
 
-    return fn()
-      .finally(() => {
-        state.isLocked = false
-      })
+    return fn().finally(() => {
+      state.isLocked = false
+    })
   }
 }

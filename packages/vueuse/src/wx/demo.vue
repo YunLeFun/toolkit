@@ -1,27 +1,15 @@
 <script lang="ts" setup>
-import type { WxJsApiOptions } from '@yunlefun/vueuse'
+import { ref } from 'vue'
 import { useWxJsApi } from '@yunlefun/vueuse'
-import { registerWxShare } from '@yunlefun/utils'
+import { isInWxBrowser, registerWxShare } from '@yunlefun/utils'
 
 const wxDomain = 'https://wx.yunyoujun.cn'
 const url = window?.location?.href?.split?.('#')?.[0]
 
-const { isReady } = useWxJsApi(async () => {
-  const data = await fetch(`${wxDomain}/wx/config?url=${url}`)
-    .then(res => res.json())
-
-  const wxJsApiOptions: WxJsApiOptions = {
-    config: {
-      // debug: true,
-      appId: 'wx80bfa39c2ebe26e8', // replace with your appId
-      timestamp: data.timestamp,
-      nonceStr: data.nonceStr,
-      signature: data.signature,
-      jsApiList: [
-        'updateAppMessageShareData',
-        'updateTimelineShareData',
-      ],
-    },
+const isReady = ref(false)
+if (isInWxBrowser()) {
+  const { isReady: isWxReady } = useWxJsApi({
+    configUrl: `${wxDomain}/wx/config?url=${url}`,
     onReady: () => {
       registerWxShare({
         title: '@YunLeFun/vueuse',
@@ -29,11 +17,10 @@ const { isReady } = useWxJsApi(async () => {
         link: 'https://github.com/YunLeFun/toolkit/blob/main/packages/vueuse/?source=wx',
         imgUrl: 'https://cn.vuejs.org/logo.svg',
       })
-    },
-  }
-
-  return wxJsApiOptions
-})
+    }
+  })
+  isReady.value = isWxReady.value
+}
 </script>
 
 <template>

@@ -23,8 +23,8 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
     }
   },
   "main": "./dist/index.mjs",
@@ -58,7 +58,7 @@
     "@yunlefun/utils": "workspace:*"
   },
   "devDependencies": {
-    "@vueuse/core": "^9.13.0",
-    "vue": "^3.2.47"
+    "@vueuse/core": "^10.7.2",
+    "vue": "^3.4.15"
   }
 }

@@ -32,8 +32,6 @@ export interface RegisterWxShareOptions extends WxShareInfo {
 
 /**
  * Register Wx Share
- * @param options
- * @returns
  */
 export function registerWxShare(shareOptions: RegisterWxShareOptions) {
   const wx = window.wx
