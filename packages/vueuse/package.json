@@ -1,7 +1,7 @@
 {
   "name": "@yunlefun/vueuse",
   "type": "module",
-  "version": "0.1.2-beta.0",
+  "version": "0.1.2-beta.1",
   "description": "Vue Composition API for YunLeFun developing.",
   "author": {
     "name": "YunLeFun",

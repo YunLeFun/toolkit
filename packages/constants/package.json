@@ -1,6 +1,6 @@
 {
   "name": "@yunlefun/constants",
-  "version": "0.1.1",
+  "version": "0.1.2-beta.1",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
