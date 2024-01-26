@@ -7,6 +7,7 @@ export interface WxJsApiOptions extends WxInitOptions {
   debug?: boolean
   /**
    * get config from server url
+   * return { appId, timestamp, nonceStr, signature }
    */
   configUrl?: string
 }
@@ -38,6 +39,7 @@ export function useWxJsApi(
     }
 
     let data: {
+      appId?: string
       timestamp?: string
       nonceStr?: string
       signature?: string
@@ -56,7 +58,7 @@ export function useWxJsApi(
       ...options,
 
       config: {
-        appId: "wx80bfa39c2ebe26e8", // replace with your appId
+        appId: data.appId,
         timestamp: data.timestamp,
         nonceStr: data.nonceStr,
         signature: data.signature,
