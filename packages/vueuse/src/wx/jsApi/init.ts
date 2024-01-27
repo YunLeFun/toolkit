@@ -9,7 +9,9 @@ export interface WxJsApiOptions extends WxInitOptions {
   debug?: boolean
   /**
    * get config from server url
-   * return { appId, timestamp, nonceStr, signature }
+   * return {
+   *   data: { appId, timestamp, nonceStr, signature }
+   * }
    */
   configUrl?: string
 }
@@ -39,11 +41,18 @@ export function useWxJsApi(
       signature?: string
     } = {}
     if (options.configUrl) {
-      data = await fetch(options.configUrl).then(
+      const res = await fetch(options.configUrl).then(
         res => res.json(),
       )
+      if (res.data) {
+        data = res.data
+      }
+      else {
+        console.error('wx config data (fetch from configUrl) error', res)
+        return
+      }
       if (options.debug)
-        console.log('wx config data (fetch from configUrl)', data)
+        console.log('wx config data (fetch from configUrl)', res)
     }
 
     wx.value = createWx({
