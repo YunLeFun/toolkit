@@ -1,7 +1,7 @@
 {
   "name": "@yunlefun/vueuse",
   "type": "module",
-  "version": "0.1.2-beta.5",
+  "version": "0.1.2",
   "description": "Vue Composition API for YunLeFun developing.",
   "author": {
     "name": "YunLeFun",
@@ -58,7 +58,7 @@
     "@yunlefun/utils": "workspace:*"
   },
   "devDependencies": {
-    "@vueuse/core": "^10.7.2",
-    "vue": "^3.4.15"
+    "@vueuse/core": "^10.9.0",
+    "vue": "^3.4.21"
   }
 }
