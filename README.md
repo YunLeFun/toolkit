@@ -6,7 +6,7 @@
 
 | 包 | 用途 |
 | --- | --- |
-| [`@yunlefun/assets`](./packages/assets/) | 第一方应用的素材 schema、HTTP 客户端与 Picker 消息协议；尚未发布到 npm |
+| [`@yunlefun/assets`](./packages/assets/) | 第一方应用的素材 schema、HTTP 客户端与 Picker 消息协议；[npm 0.1.0](https://www.npmjs.com/package/@yunlefun/assets) |
 | [`@yunlefun/utils`](./packages/utils/) | 通用工具函数 |
 | [`@yunlefun/vueuse`](./packages/vueuse/) | Vue Composition API 工具 |
 
