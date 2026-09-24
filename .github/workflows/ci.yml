@@ -21,7 +21,7 @@ jobs:
       - name: Set node
         uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 22.x
           cache: pnpm
 
       - name: Install
@@ -41,7 +41,7 @@ jobs:
       - name: Set node
         uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 22.x
           cache: pnpm
 
       - name: Install
@@ -55,7 +55,7 @@ jobs:
 
     strategy:
       matrix:
-        node: [16.x]
+        node: [22.x]
         os: [ubuntu-latest]
       fail-fast: false
 

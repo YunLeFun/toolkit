@@ -1,0 +1,35 @@
+{
+  "name": "@yunlefun/assets",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "YunLeFun asset schemas, client, and picker protocol for first-party apps",
+  "license": "MIT",
+  "homepage": "https://github.com/YunLeFun/toolkit/tree/main/packages/assets",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YunLeFun/toolkit.git",
+    "directory": "packages/assets"
+  },
+  "bugs": "https://github.com/YunLeFun/toolkit/issues",
+  "sideEffects": false,
+  "exports": {
+    ".": "./dist/index.mjs"
+  },
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": ["LICENSE", "README.md", "dist"],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "typecheck": "tsc --noEmit -p ../../tsconfig.json"
+  },
+  "dependencies": {
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "unbuild": "^3.6.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

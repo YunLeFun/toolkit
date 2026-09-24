@@ -4,7 +4,7 @@
   "version": "0.1.2",
   "private": true,
   "packageManager": "pnpm@9.15.9",
-  "description": "Toolkit for YunLeFun developing.",
+  "description": "Public YunLeFun protocols, types, and reusable npm packages.",
   "author": {
     "name": "YunLeFun",
     "email": "i@yunle.fun",
@@ -31,7 +31,7 @@
     "@yunyoujun/utils": "^0.3.5",
     "bumpp": "^9.4.0",
     "eslint": "^9.0.0",
-    "typescript": "^5.4.5",
+    "typescript": "^5.9.3",
     "unbuild": "^2.0.0",
     "vite": "^5.2.8",
     "vitest": "^1.5.0",
