@@ -31,7 +31,7 @@
 
 ## 版本与发布
 
-`0.1.0` 已发布到 [npm](https://www.npmjs.com/package/@yunlefun/assets)。协议变更与包版本一起提交；消费应用固定依赖已发布版本，并在升级时运行契约测试。Drive 的旧工作区副本将在依赖切换后删除。
+`0.1.0` 已发布到 [npm](https://www.npmjs.com/package/@yunlefun/assets)。协议变更与包版本一起提交；消费应用固定依赖已发布版本，并在升级时运行契约测试。Drive 已切换到 npm 版本并删除旧工作区副本。
 
 后续版本在 PR 中更新 `packages/assets/package.json` 的版本与契约说明，合并到 `main` 后手动运行
 [`Stage assets package`](../../.github/workflows/publish-assets.yml)。工作流只将素材包提交到 npm 暂存区；
