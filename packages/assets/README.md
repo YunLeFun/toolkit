@@ -2,13 +2,11 @@
 
 云乐坊第一方应用的素材契约包，提供 Zod schema、TypeScript 类型、HTTP 客户端与 Picker 消息校验。源码与[版本化契约说明](../../docs/assets/README.md)一同维护。
 
-> 当前包尚未发布到 npm。Drive 仍使用其工作区内的同版本实现；切换到本包需等首次发布并验证兼容性。
-
 包不包含 CloudBase、COS、管理员能力或凭据。应用必须由 Drive 注册并授权；公开包本身不授予素材服务访问权。
 
 ## Usage
 
-发布后可从 npm 安装：
+从 npm 安装：
 
 ```bash
 pnpm add @yunlefun/assets
