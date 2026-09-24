@@ -32,3 +32,9 @@
 ## 版本与发布
 
 `0.1.0` 已发布到 [npm](https://www.npmjs.com/package/@yunlefun/assets)。协议变更与包版本一起提交；消费应用固定依赖已发布版本，并在升级时运行契约测试。Drive 的旧工作区副本将在依赖切换后删除。
+
+后续版本在 PR 中更新 `packages/assets/package.json` 的版本与契约说明，合并到 `main` 后手动运行
+[`Stage assets package`](../../.github/workflows/publish-assets.yml)。工作流只将素材包提交到 npm 暂存区；
+维护者应检查暂存包的版本、文件和变更，再通过 npm 的 2FA 审批正式发布。旧版 monorepo
+`Release` 工作流排除素材包，不能用旧的 `NPM_TOKEN` 发布它。版本一经发布不得覆盖；
+消费应用在 npm 版本可用且契约测试通过后再升级依赖。
